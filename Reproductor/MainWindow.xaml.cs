@@ -35,6 +35,7 @@ namespace Reproductor
         bool dragging = false;
         //VolumeSampleProvider volume;
         EfectoVolumen efectoVolumen;
+        FadeIn fadeIn;
 
         public MainWindow()
         {
@@ -51,6 +52,11 @@ namespace Reproductor
 
         private void Timer_Tick(object sender, EventArgs e)
         {
+            if(fadeIn != null)
+            {
+                //lblMuestras.Text = fadeIn.segundosTranscurridos.ToString();
+            }
+
             lblTiempoActual.Text = reader.CurrentTime.ToString().Substring(0, 8);
 
             //para que recorra el slider
@@ -99,7 +105,9 @@ namespace Reproductor
                     /*volume = new VolumeSampleProvider(reader);
                     volume.Volume = (float)(sldVolumen.Value);*/
 
-                    efectoVolumen = new EfectoVolumen(reader);
+                    fadeIn = new FadeIn(reader, 5.0f);
+
+                    efectoVolumen = new EfectoVolumen(fadeIn);
                     efectoVolumen.Volumen = (float)(sldVolumen.Value);
 
                     output = new WaveOut();
