@@ -105,7 +105,8 @@ namespace Reproductor
                     /*volume = new VolumeSampleProvider(reader);
                     volume.Volume = (float)(sldVolumen.Value);*/
 
-                    fadeIn = new FadeIn(reader, 5.0f);
+                    float duracionFadeIn = float.Parse(txtDuracion.Text);
+                    fadeIn = new FadeIn(reader, duracionFadeIn);
 
                     efectoVolumen = new EfectoVolumen(fadeIn);
                     efectoVolumen.Volumen = (float)(sldVolumen.Value);

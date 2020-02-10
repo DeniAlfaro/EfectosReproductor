@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="EfectoVolumen.cs" />
     <Compile Include="FadeIn.cs" />
+    <Compile Include="FadeOut.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

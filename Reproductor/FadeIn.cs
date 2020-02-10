@@ -14,6 +14,7 @@ namespace Reproductor
         private int muestrasLeidas = 0;
         private float segundosTranscurridos = 0;
         private float duracion;
+        private float inicio;
 
         public FadeIn(ISampleProvider fuente, float duracion)
         {
@@ -33,6 +34,7 @@ namespace Reproductor
         {
             int read = fuente.Read(buffer, offset, count);
 
+            /*
             //Aplicar el efecto
             muestrasLeidas += read;
             segundosTranscurridos = (float)muestrasLeidas / (float)fuente.WaveFormat.SampleRate / (float)fuente.WaveFormat.Channels;
@@ -45,7 +47,7 @@ namespace Reproductor
                 {
                     buffer[i + offset] *= factorEscala;
                 }
-            }
+            }*/
 
             return read;
         }
