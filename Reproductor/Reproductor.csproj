@@ -67,6 +67,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EfectoDelay.cs" />
     <Compile Include="EfectoVolumen.cs" />
     <Compile Include="FadeIn.cs" />
     <Compile Include="FadeOut.cs" />
